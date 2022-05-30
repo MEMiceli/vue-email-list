@@ -10,16 +10,15 @@
 const app = new Vue({
     el: '#app',
     data: {
-        email: '',
+        email: [],
     },
     created(){
-        franco = this;
         for (let i = 0; i < 10; i++) {
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
             .then((res) =>{
-            franco.email += res.data.response;
-            console.log(franco.email);
-            email.push(franco.email);
+            // email[] += res.data.response;
+            // console.log(franco.email);
+            this.email.push(res.data.response);
              
         })
     }}
