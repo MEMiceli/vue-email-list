@@ -14,14 +14,11 @@ const app = new Vue({
     },
     created(){
         for (let i = 0; i < 10; i++) {
-            axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
-            .then((res) =>{
-            // email[] += res.data.response;
-            // console.log(franco.email);
-            this.email.push(res.data.response);
-             
-        })
-    }}
+        axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((res) =>{
+             this.email.push(res.data.response); 
+            })
+        }
+    }
 
 })
 
